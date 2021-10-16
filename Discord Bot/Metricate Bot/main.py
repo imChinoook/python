@@ -29,6 +29,8 @@ async def on_message(message):
       embed.add_field(name="Where can I DM Metricate", value="His DM's are closed everywhere, and he only DM's people he knows. If you want to contact staff please open up a ticket after reading the <#776874923749670963> or you can contact him via his business email, metricate.contact@gmail.com", inline=True)
       embed.set_footer(text="Developed by Wadairity#0706")
       await message.channel.send(embed=embed)
-
+    if message.content.startswith('m!credits'):
+        await message.channel.send('This bot was developed by <@805472705771733012> for Metricate.')
+        await message.channel.send('The source code can be found on the developers github page: https://bit.ly/3aHgLe6')
 keep_alive()
 client.run(os.getenv('TOKEN'))
